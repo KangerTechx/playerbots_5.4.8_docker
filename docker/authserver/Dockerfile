@@ -1,16 +1,19 @@
-# Select base image (default: Debian 12 / bookworm)
-ARG BASE_IMAGE=debian:bookworm-slim
+# Select base image (Debian 11 / bullseye)
+ARG BASE_IMAGE=debian:bullseye-slim
 FROM ${BASE_IMAGE}
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install runtime libraries only
+# Install runtime libraries including Boost 1.74
 RUN apt-get update && apt-get install -y \
-    libace-dev \          
-    libssl3 \            
-    libmariadb3 \       
-    libreadline8 \   
-    libncurses6 \    
+    libboost-filesystem1.74.0 \
+    libboost-system1.74.0 \
+    libboost-thread1.74.0 \
+    libace-dev \
+    libssl3 \
+    libmariadb3 \
+    libreadline8 \
+    libncurses6 \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy entrypoint script
