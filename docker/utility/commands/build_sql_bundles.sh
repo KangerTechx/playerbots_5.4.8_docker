@@ -31,6 +31,15 @@ PLAYERBOTS_PATCHES="$SQL_INSTALL_DIR/playerbots_patches_update.sql"
 mkdir -p "$SQL_INSTALL_DIR" "$SQL_TMP_DIR"
 rm -f "$SQL_INSTALL_DIR"/*.sql
 
+
+# --- Télécharger le zip world si pas déjà présent ---
+if [ ! -f "$SQL_BASE_DIR/world_20_01_2026.zip" ]; then
+    echo "Downloading world database..."
+    curl -L "$WORLD_DB_URL" -o "$SQL_BASE_DIR/world_20_01_2026.zip"
+else
+    echo "world_20_01_2026.zip already exists in $SQL_BASE_DIR, skipping download."
+fi
+
 echo "=== Building bundled SQL files for $PROJECT_NAME ==="
 
 # --- Extract base SQL from zips ---
