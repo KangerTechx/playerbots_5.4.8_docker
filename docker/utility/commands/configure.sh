@@ -16,6 +16,7 @@ sed -i -e "s|^LoginDatabaseInfo =.*|LoginDatabaseInfo = \"$DB_HOST;$DB_PORT;$SER
 # Always reset worldserver.conf
 echo "Resetting worldserver.conf..."
 cp "$INSTALL_PREFIX/etc/worldserver.conf.dist" "$INSTALL_PREFIX/etc/worldserver.conf"
+cp "$INSTALL_PREFIX/etc/playerbots.conf.dist" "$INSTALL_PREFIX/etc/playerbots.conf"
 
 sed -i -e "s|^DataDir =.*|DataDir = \"$DATA_DIR_PATH\"|" "$INSTALL_PREFIX/etc/worldserver.conf"
 sed -i -e "s|^LogsDir =.*|LogsDir = \"$LOGS_DIR_PATH\"|" "$INSTALL_PREFIX/etc/worldserver.conf"
