@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     libboost-system1.74.0 \
     libboost-thread1.74.0 \
     libace-dev \
-    libssl3 \
+    libssl1.1 \
     libmariadb3 \
     libreadline8 \
     libncurses6 \

@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install runtime libraries only
 RUN apt-get update && apt-get install -y \
     libace-dev \          
-    libssl3 \            
+    libssl1.1 \            
     libmariadb3 \       
     libreadline8 \   
     libncurses6 \    
