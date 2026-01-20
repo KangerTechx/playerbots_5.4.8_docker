@@ -86,7 +86,12 @@ merge_patches() {
     fi
 
     echo "Merging patches from $src_dir into $target..."
-    cat $(find "$src_dir" -type f -name '*.sql' | sort) > "$target" || echo "-- No patches merged" > "$target"
+
+    find "$src_dir" -type f -name '*.sql' -print0 \
+      | sort -z \
+      | xargs -0 -r cat > "$target"
+
+    [ -s "$target" ] || echo "-- No patches merged" > "$target"
 }
 
 merge_patches "$SQL_UPDATES_DIR/auth" "$AUTH_PATCHES"
