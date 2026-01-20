@@ -10,10 +10,10 @@ SQL_UPDATES_DIR="${SQL_UPDATES_DIR:-/src/playerbots_5.4.8/sql/updates}"
 SQL_BASE_DIR="${SQL_BASE_DIR:-/src/playerbots_5.4.8/sql/base}"
 
 # These filenames must exist in the extracted zips
-AUTH_SQL="${AUTH_SQL:-auth_04_03_2023.sql}"
-CHARACTER_SQL="${CHARACTER_SQL:-characters_29_12_2024.sql}"
-WORLD_SQL="${WORLD_SQL:-world_04_03_2023.sql}"
-PLAYERBOTS_SQL="${PLAYERBOTS_SQL:-playerbots_19_01_26.sql}"
+AUTH_SQL="${AUTH_SQL:-auth_20_01_2026.sql}"
+CHARACTER_SQL="${CHARACTER_SQL:-characters_20_01_2026.sql}"
+WORLD_SQL="${WORLD_SQL:-world_20_01_2026.sql}"
+PLAYERBOTS_SQL="${PLAYERBOTS_SQL:-playerbots_20_01_2026.sql}"
 
 # Output bundle files (always generated with these names)
 AUTH_BUNDLE="$SQL_INSTALL_DIR/auth_base.sql"
