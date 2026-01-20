@@ -1,13 +1,17 @@
 # Select base image (default: Debian 12 / bookworm)
-ARG BASE_IMAGE=debian:bullseye
+ARG BASE_IMAGE=debian:bookworm-slim
 FROM ${BASE_IMAGE}
 
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install runtime libraries only
 RUN apt-get update && apt-get install -y \
+    libboost-filesystem1.74.0 \
+    libboost-program-options1.74.0 \
+    libboost-system1.74.0 \
+    libboost-thread1.74.0 \
     libace-dev \          
-    libssl1.1 \            
+    libssl3 \            
     libmariadb3 \       
     libreadline8 \   
     libncurses6 \    
