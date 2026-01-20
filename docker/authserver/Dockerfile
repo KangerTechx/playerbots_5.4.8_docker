@@ -1,5 +1,5 @@
 # Select base image (default: Debian 12 / bookworm)
-ARG BASE_IMAGE=debian:bookworm-slim
+ARG BASE_IMAGE=debian:bullseye
 FROM ${BASE_IMAGE}
 
 ENV DEBIAN_FRONTEND=noninteractive

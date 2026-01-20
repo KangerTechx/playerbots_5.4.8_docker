@@ -1,5 +1,5 @@
 # Select base image (Debian 11 / bullseye)
-ARG BASE_IMAGE=debian:bullseye-slim
+ARG BASE_IMAGE=debian:bullseye
 FROM ${BASE_IMAGE}
 
 ENV DEBIAN_FRONTEND=noninteractive
