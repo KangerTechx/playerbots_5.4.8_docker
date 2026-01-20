@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     libboost-thread1.74.0 \
     libboost-iostreams1.74.0 \
     libboost-program-options1.74.0 \
+    libboost-regex1.74.0 \
     libace-dev \          
     libssl3 \            
     libmariadb3 \       
